@@ -1,0 +1,23 @@
+<svg width="240" height="60" viewBox="0 0 240 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(0, 45)">
+     {/* YOU - Solid Paths for precise control */}
+     {/* Y */}
+     <path d="M0 -35L15 -18V0" stroke="#14120f" stroke-width="2.5" fill="none"/>
+     <path d="M30 -35L15 -18" stroke="#14120f" stroke-width="2.5" fill="none"/>
+     {/* O */}
+     <circle cx="55" cy="-17.5" r="17.5" stroke="#14120f" stroke-width="2.5" fill="none"/>
+     {/* U */}
+     <path d="M85 -35V-15C85 -5 105 -5 105 -15V-35" stroke="#14120f" stroke-width="2.5" fill="none"/>
+     
+     {/* TAX - Dashed Paths as per the user's specific logo style */}
+     {/* T */}
+     <path d="M125 -35H155" stroke="#14120f" stroke-width="2.5" stroke-dasharray="4 2" fill="none"/>
+     <path d="M140 -35V0" stroke="#14120f" stroke-width="2.5" stroke-dasharray="4 2" fill="none"/>
+     {/* A */}
+     <path d="M165 0L180 -35L195 0" stroke="#14120f" stroke-width="2.5" stroke-dasharray="4 2" fill="none"/>
+     <path d="M172 -15H188" stroke="#14120f" stroke-width="2.5" stroke-dasharray="4 2" fill="none"/>
+     {/* X */}
+     <path d="M205 -35L235 0" stroke="#14120f" stroke-width="2.5" stroke-dasharray="4 2" fill="none"/>
+     <path d="M235 -35L205 0" stroke="#14120f" stroke-width="2.5" stroke-dasharray="4 2" fill="none"/>
+  </g>
+</svg>

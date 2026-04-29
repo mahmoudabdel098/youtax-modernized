@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Impeccable Palette (Adapted for Gold Accent) */
+  --primary-gold: oklch(75% 0.1 85);
+  --primary-gold-deep: oklch(65% 0.1 85);
+  --warm-ash-cream: oklch(96% 0.005 85);
+  --crisp-paper-white: oklch(98% 0 0);
+  --deep-graphite: oklch(10% 0 0);
+  --soft-charcoal: oklch(25% 0 0);
+  --mid-ash: oklch(55% 0 0);
+  --paper-mist: oklch(92% 0 0);
+  
+  --bg-light: var(--warm-ash-cream);
+  --text-dark: var(--deep-graphite);
+  --text-gray: var(--soft-charcoal);
+  
+  /* Spacing Scale (Editorial) - Slightly reduced for compactness */
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 20px;
+  --spacing-lg: 28px;
+  --spacing-xl: 40px;
+  --spacing-2xl: 60px;
+  --spacing-3xl: 80px;
+  
+  /* Easing */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Instrument Sans', system-ui, sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  overflow-x: hidden;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 400;
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+  max-width: 75ch;
+}
+
+.container {
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+/* Impeccable Button - Squared, No Shadow at rest */
+.btn-primary {
+  background-color: var(--deep-graphite);
+  color: var(--crisp-paper-white);
+  padding: 16px 48px;
+  border: none;
+  border-radius: 0;
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: all 0.4s var(--ease-out-expo);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-gold);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--deep-graphite);
+  padding: 14px 44px;
+  border: 1px solid var(--paper-mist);
+  border-radius: 0;
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: all 0.4s var(--ease-out-expo);
+}
+
+.btn-outline:hover {
+  border-color: var(--primary-gold);
+  color: var(--primary-gold);
+  transform: translateY(-2px);
+}
+
+/* Typography Utilities */
+.display-text {
+  font-size: clamp(2.5rem, 7vw, 4.5rem);
+  font-weight: 300;
+  font-style: italic;
+}
+
+.headline-text {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 400;
+}
+
+.label-text {
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--primary-gold);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--warm-ash-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--paper-mist);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--mid-ash);
+}
+
+/* Common Section */
+section {
+  padding: var(--spacing-2xl) 0;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  :root {
+    --spacing-2xl: 48px;
+    --spacing-3xl: 64px;
+  }
+  
+  .display-text {
+    font-size: 3rem;
+  }
+  
+  .headline-text {
+    font-size: 2rem;
+  }
+}
+
+/* Grid Adjustments */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 24px;
+  }
+  
+  section {
+    padding: var(--spacing-xl) 0;
+  }
+}
+
+@media (max-width: 768px) {
+  div[style*="display: grid"] {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+  
+  .hero-text-container {
+    padding-top: 120px !important;
+    text-align: center;
+  }
+  
+  .hero-text-container p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
