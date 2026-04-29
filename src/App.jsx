@@ -10,7 +10,7 @@ import AboutPage from './pages/AboutPage';
 import VideoPage from './pages/VideoPage';
 import ArticlesPage from './pages/ArticlesPage';
 import ContactPage from './pages/ContactPage';
-import CustomCursor from './components/CustomCursor';
+
 
 // Scroll to top on route change
 const ScrollToTop = () => {
@@ -65,7 +65,7 @@ function AppContent() {
           scaleX 
         }} 
       />
-      <CustomCursor />
+
       <Header />
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
